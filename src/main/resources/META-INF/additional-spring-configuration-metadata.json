@@ -1,0 +1,33 @@
+{
+  "properties": [
+    {
+      "name": "cipher.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable the Cipher Spring Boot Starter autoconfiguration.",
+      "defaultValue": true
+    },
+    {
+      "name": "cipher.algorithm",
+      "type": "io.github.tanmaysinghx.cipher.core.algorithm.CipherAlgorithm",
+      "description": "Default authenticated symmetric cipher algorithm (AES_256_GCM, AES_128_GCM, CHACHA20_POLY1305).",
+      "defaultValue": "AES_256_GCM"
+    },
+    {
+      "name": "cipher.active-key-version",
+      "type": "java.lang.String",
+      "description": "Active key version identifier used for all new encryption operations.",
+      "defaultValue": "v1"
+    },
+    {
+      "name": "cipher.keys",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "description": "Key version to secret key material mapping (Base64 or Hex encoded)."
+    },
+    {
+      "name": "cipher.payload-prefix",
+      "type": "java.lang.String",
+      "description": "Prefix used when formatting ciphertext envelopes (e.g. 'enc').",
+      "defaultValue": "enc"
+    }
+  ]
+}
